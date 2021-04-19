@@ -16,6 +16,5 @@ The file *0_data_download.py* has the code needed to download a zip file of all 
 import pickle5 as pickle
 
 with open("articles_df.pkl", "rb") as fh:
-
 > tweets = pickle.load(fh)
 ```
