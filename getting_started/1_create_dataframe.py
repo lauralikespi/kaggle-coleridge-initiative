@@ -15,6 +15,7 @@ only_files = [f for f in listdir(my_path) if isfile(join(my_path, f))]
 df = pd.DataFrame(columns=['section_title','text','article_id'])
 
 ## For each of the files, read in the JSON and add a column with the article ID
+## Note: this will take awhile to run, if you want a progress update, uncomment the print(article_df.head()) line. It will slow things down a tiny bit but you will be sure the code is still running.
 for file_name in only_files:
     file_location = str(my_path) + str("/") + str(file_name) # create the file path
     # print(file_location) # print file location
@@ -26,3 +27,5 @@ for file_name in only_files:
 print(df.shape) # (258714,3) (rows, columns)
 print(df.describe()) # print out a summary of the columns
 print(df.head()) # print out top 5 lines
+
+df.to_pickle("./articles_df.pkl") # output the dataframe so it can be used in other code
