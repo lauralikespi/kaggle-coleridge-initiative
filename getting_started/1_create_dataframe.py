@@ -6,7 +6,7 @@ from os import listdir # os
 from os.path import isfile, join
 
 ## The file path to the folder with all the JSON files (this will need updating)
-my_path = "/Users/laura/Documents/Coding/kaggle/kaggle-coleridge-initiative/coleridgeinitiative-show-us-the-data/train"
+my_path = "/Users/s.konkiel/Dropbox/kaggle-coleridge-initiative/getting_started/coleridgeinitiative-show-us-the-data/train"
 
 ## Code to go through the directory (or folder) and list any files
 only_files = [f for f in listdir(my_path) if isfile(join(my_path, f))]
